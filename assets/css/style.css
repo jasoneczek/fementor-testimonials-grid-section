@@ -14,8 +14,38 @@
   font-style: normal;
 }
 
-body {
-  font-family: 'Barlow Semi Condensed';
-  font-weight: 600;
+:root {
+  /* colors */
+  --violet: hsl(263, 55%, 52%);
+  --dark-gray-blue: hsl(217, 19%, 35%);
+  --dark-black-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+}
 
+/* utility classes */
+.bg-primary {
+  background-color: var(--violet);
+}
+
+.bg-secondary {
+  background-color: var(--dark-gray-blue);
+}
+
+.bg-dark {
+  background-color: var(--dark-black-blue);
+}
+
+.bg-light {
+  background-color: var(--light-gray-blue);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+body {
+  background-color: var(--light-gray-blue);
+  font-family: 'Barlow Semi Condensed';
 }
