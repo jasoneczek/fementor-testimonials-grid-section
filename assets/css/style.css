@@ -22,9 +22,30 @@
   --white: hsl(0, 0%, 100%);
   --light-gray: hsl(0, 0%, 81%);
   --light-gray-blue: hsl(210, 46%, 95%);
+
+  /* typography */
+  --ff-ss: 'Barlow Semi Condensed', sans-serif;
+
+  /* font weights */
+  --fw-m: 500; /* main */
+  --fw-sb: 600; /* quote lead */
+
+  /* font sizes */
+  --fs-1: 0.6875rem; /* status */
+  --fs-2: 0.8125rem; /* name, quote */
+  --fs-3: 1.25rem; /* quote lead */
 }
 
-/* utility classes */
+body {
+  background-color: var(--light-gray-blue);
+  font-family: var(--ff-ss);
+}
+
+/* UTILITY CLASSES */
+
+/* COLORS */
+
+/* background colors */
 .bg-primary {
   background-color: var(--violet);
 }
@@ -45,7 +66,52 @@
   background-color: var(--white);
 }
 
-body {
-  background-color: var(--light-gray-blue);
-  font-family: 'Barlow Semi Condensed';
+/* text colors */
+.text-dark {
+  color: var(--dark-gray-blue);
 }
+
+.text-light-1 {
+  color: var(--light-gray);
+}
+
+.text-light-2 {
+  color: var(--light-gray-blue);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-mute-50 {
+  opacity: 0.5;
+}
+
+.text-mute-70 {
+  opacity: 0.7;
+}
+
+/* TYPOGRAPHY */
+
+/* font sizes */
+.fs-1 {
+  font-size: var(--fs-1);
+}
+
+.fs-2 {
+  font-size: var(--fs-2);
+}
+
+.fs-3 {
+  font-size: var(--fs-3);
+}
+
+/* font weights */
+.fw-m {
+  font-weight: var(--fw-m);
+}
+
+.fw-sb {
+  font-weight: var(--fw-sb);
+}
+
