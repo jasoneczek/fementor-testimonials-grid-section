@@ -36,9 +36,38 @@
   --fs-3: 1.25rem; /* quote lead */
 }
 
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: var(--light-gray-blue);
+  min-height: 100svh;
+  line-height: 1.5;
   font-family: var(--ff-ss);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* UTILITY CLASSES */
