@@ -132,6 +132,20 @@ img {
   margin-block: 1.25rem;
 }
 
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--dark-gray-blue);
+  transition: color 0.3s ease-in-out;
+}
+
+.attribution a:hover {
+  color: var(--violet);
+}
+
 /* ========================== */
 /* UTILITY CLASSES */
 /* ========================== */
