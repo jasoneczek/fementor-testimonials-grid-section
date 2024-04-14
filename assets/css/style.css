@@ -41,17 +41,14 @@
   --br-50: 50%; /* images */
 
   /* spacing */
-  /* padding */
-  --p-1: 1.75rem;
-  --p-2: 1.9375rem;
-  --p-3: 2rem;
-
-  /* margin */
-  --m-1: 0.9375rem;
-  --m-2: 1.03125rem;
-  --m-3: 1.0625rem;
-  --m-4: 2.25rem;
-  --m-5: 4.5rem;
+  --spacer-xs: 0.5rem;    
+  --spacer-sm: 1rem;       
+  --spacer-md: 1.5rem;     
+  --spacer-lg: 2rem;       
+  --spacer-xl: 2.5rem;     
+  --spacer-2xl: 3rem;      
+  --spacer-3xl: 4rem;      
+  --spacer-4xl: 5rem;      
 }
 
 html {
@@ -90,34 +87,36 @@ img {
 .main {
   font-family: var(--ff-ss);
   max-width: min(69.375rem, 100% - 3rem);
-  margin: var(--m-5) auto;
+  margin: var(--spacer-3xl) auto;
   grid-template-areas:
    "t1"
    "t2"
    "t3"
    "t4"
    "t5";
-  gap: 1.5rem;
+  gap: var(--spacer-md);
 }
 
 .testimonial {
-  padding-block: var(--p-1) var(--p-2);
-  padding-inline: var(--p-3);
+  padding-block: var(--spacer-md) var(--spacer-lg);
+  padding-inline: var(--spacer-lg);
   box-shadow: 2.5rem 3rem 2.5rem -2.5rem hsla(217, 19%, 35%, 0.25);
 }
+
 
 .t-1 {
   background-image: url(../images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: top 0 right 10%;
+  background-size: 6.5rem;
 }
 
 .t-1 .quote-lead {
-  margin-bottom: var(--m-4);
+  margin-bottom: var(--spacer-2xl);
 }
 
 .t-1 p:last-child {
-  margin-right: var(--m-2);
+  margin-right: 1.03125rem;;
 }
 
 .avatar {
@@ -125,16 +124,17 @@ img {
   width: 1.75rem;
   box-sizing: content-box;
   border: 2px transparent;
-  margin-right: var(--m-3);
+  margin-right: 1.0625rem;
 }
 
 .quote-lead {
-  line-height: 1.2;
-  margin-block: var(--m-1);
+  line-height: 1.1;
+  margin-block: 1.25rem;
 }
 
-
+/* ========================== */
 /* UTILITY CLASSES */
+/* ========================== */
 
 /* COLORS */
 
@@ -187,7 +187,6 @@ img {
 /* avatar border color */
 .bc-primary {
   border: 2px solid var(--violet-border);
-  
 }
 
 /* TYPOGRAPHY */
@@ -237,5 +236,33 @@ img {
 
 .br-50 {
   border-radius: var(--br-50);
+}
+
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: var(--spacer-lg);
+    grid-template-areas: 
+     "t-1 t-1 t-2 t-5"
+     "t-3 t-4 t-4 t-5";
+  }
+
+  .testimonial.t-1 { grid-area: t-1; }
+  .testimonial.t-2 { grid-area: t-2; }
+  .testimonial.t-3 { grid-area: t-3; }
+  .testimonial.t-4 { grid-area: t-4; }
+  .testimonial.t-5 { grid-area: t-5; }
+
+  .t-1 {
+    background-position: top 0 right 18%;
+  }
+
+  .t-1 .quote-lead {
+    margin-bottom: var(--spacer-md);
+  }
+
+  .t-1 p:last-child {
+    margin-right: 0;
+  }
 }
 
