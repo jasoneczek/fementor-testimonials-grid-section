@@ -70,6 +70,7 @@ html {
 body {
   min-height: 100svh;
   line-height: 1.4;
+  font-family: var(--ff-ss);
 }
 
 h1,
@@ -85,7 +86,6 @@ img {
 }
 
 .main {
-  font-family: var(--ff-ss);
   max-width: min(69.375rem, 100% - 3rem);
   margin: var(--spacer-3xl) auto;
   grid-template-areas:
@@ -133,12 +133,10 @@ img {
 }
 
 .attribution {
-  font-size: 0.6875rem;
   text-align: center;
 }
 
 .attribution a {
-  color: var(--dark-gray-blue);
   transition: color 0.3s ease-in-out;
 }
 
