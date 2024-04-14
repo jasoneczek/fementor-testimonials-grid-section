@@ -51,6 +51,7 @@
   --m-2: 1.03125rem;
   --m-3: 1.0625rem;
   --m-4: 2.25rem;
+  --m-5: 4.5rem;
 }
 
 html {
@@ -89,7 +90,7 @@ img {
 .main {
   font-family: var(--ff-ss);
   max-width: min(69.375rem, 100% - 3rem);
-  margin: 0 auto;
+  margin: var(--m-5) auto;
   grid-template-areas:
    "t1"
    "t2"
@@ -102,6 +103,7 @@ img {
 .testimonial {
   padding-block: var(--p-1) var(--p-2);
   padding-inline: var(--p-3);
+  box-shadow: 2.5rem 3rem 2.5rem -2.5rem hsla(217, 19%, 35%, 0.25);
 }
 
 .t-1 {
